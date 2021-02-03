@@ -117,14 +117,14 @@ var callAsanaApi = function (request, path, options, data, callback) {
     status = xhr.status;
     return status;
   };
-  var manifest = chrome.runtime.getManifest();
-  var client_name = ['chrome-extension', manifest.version, manifest.name].join(':'); // Be polite to Asana API
+//   var manifest = chrome.runtime.getManifest();
+//   var client_name = ['chrome-extension', manifest.version, manifest.name].join(':'); // Be polite to Asana API
   var requestData;
   if (request === 'POST' || request === 'PUT') {
     requestData = JSON.stringify({'data': data});
-    options.client_name = client_name;
+//     options.client_name = client_name;
   } else {
-    options.opt_client_name = client_name;
+//     options.opt_client_name = client_name;
   }
   var requestUrl = 'https://app.asana.com/api/1.0/' + path;
   if (Object.keys(options).length) {
