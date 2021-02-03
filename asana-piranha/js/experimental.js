@@ -1,3 +1,13 @@
+// ==UserScript==
+// @name         Asana Tools
+// @namespace    https://siteadmin.instructure.com/
+// @version      2021.02.03
+// @author       Alex Carey
+// @match        https://app.asana.com/*
+// @grant        GM_getValue
+// @grant        GM_setValue
+// ==/UserScript==
+
 //experimental.js - vanilla js testing
 var importLink = document.createElement("div");
     importLink.className = "TopbarPageHeaderGlobalActions-omnibutton"
