@@ -21,7 +21,7 @@ var importLink = document.createElement("div");
 //get complete task list for templates
 var getTasks = function () {
   document.getElementById('import-button').onclick = function () {
-    x = document.getElementsByClassName("asana-import");
+    let x = document.getElementsByClassName("asana-import");
     for (var i = 0; i < x.length; i++) {
       x[i].setAttribute("disabled", true)
     }
@@ -48,7 +48,7 @@ var customFields = function (tasks) {
       var customId = taskFields[k].gid
       var customType = taskFields[k].enum_value
 			if (customType != null) {
-        customValue = customType.gid
+        let customValue = customType.gid
         console.log(customId, customValue);
         customFieldsArr[customId] = customValue;
       }
@@ -60,12 +60,12 @@ var customFields = function (tasks) {
     var project = input.value;
 
 		if(subType == 'section'){
-			dataArr = {
+			let dataArr = {
 				"name": taskName,
 				"projects": project
 			}
 		} else {
-			dataArr = {
+			let dataArr = {
         "name": taskName,
         "projects": project,
         "html_notes": notes,
@@ -114,7 +114,7 @@ var callAsanaApi = function (request, path, options, data, callback) {
     callback(JSON.parse(this.response));
   });
   xhr.onreadystatechange = function () {
-    status = xhr.status;
+    let status = xhr.status;
     return status;
   };
 //   var manifest = chrome.runtime.getManifest();
