@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "AsanaPiranha",
+  "version": "0.1.12",
+  "description": "Import Asana microtemplates for Instructure, Inc - INTERNAL ONLY",
+  "icons": {
+     "16": "icon16.png",
+     "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [ {
+    "css": ["css/asana.css"],
+    "js": [ "js/experimental.js" ], 
+    "matches": [ "https://app.asana.com/*" ]
+ }],
+  "permissions": ["activeTab"]
+}
